@@ -1,0 +1,155 @@
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    background-color: #ffffff;
+}
+
+.main-header {
+    background-color: #1b263b;
+    padding: 20px -40px; /* Ajusta el padding si es necesario */
+    position: fixed;
+    width: 101%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: -15px;
+}
+
+.main-header img.logo {
+    flex: 0 0 auto; /* Esto mantiene el logo en su tamaño original */
+    cursor: pointer; /* Asegura que el logo sea clickeable */
+}
+
+.main-header nav {
+    flex: 1 1 auto; /* Esto permite que la navegación ocupe el espacio restante */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-header nav ul {
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    align-items: center; /* Centra los botones verticalmente */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: larger;
+}
+
+.main-header nav ul li {
+    padding: 0 10px; /* Ajusta el espaciado entre botones */
+}
+
+.main-header nav ul li button {
+    background: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-header nav ul li button:hover {
+    background-color: #1b263b;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.chart-container {
+    display: inline-flex;
+    justify-content: center; /* Centra horizontalmente la gráfica */
+    align-items: center; /* Centra verticalmente la gráfica */
+    height: 80vh; /* Ajusta la altura del contenedor */
+    width: 75vw; /* Ajusta la anchura del contenedor */
+    padding: 20px; /* Proporciona un poco de espacio alrededor de la gráfica */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.chart {
+    width: 80%; /* Asegura que la gráfica use todo el ancho disponible */
+    height: 70%; /* Asegura que la gráfica use toda la altura disponible */
+    background-color: #fbfbfb; /* Fondo para la gráfica, ajusta según tu diseño */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para profundidad visual */
+}
+
+/* Añade transiciones suaves para elementos interactivos */
+.chart:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el cursor */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mejora la legibilidad del texto dentro de la gráfica */
+.chart text {
+    fill: #ffffff; /* Texto blanco para mejor contraste */
+    font-size: 3.2em; /* Aumenta el tamaño del texto si es necesario */
+}
+
+/* Estilo para el mensaje de cierre de sesión */
+.logout-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336; /* Rojo para el mensaje de cierre de sesión */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeInOut 3s ease-in-out;
+    text-align: center;
+    z-index: 1000; /* Asegura que el mensaje esté encima de otros elementos */
+}
+
+/* Animación de fade in y fade out */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para los botones de planta */
+.plant-button {
+    background: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.plant-button:hover {
+    background-color: #4e69a2;
+    transform: scale(1.1);
+}
+
+.plant-button:focus {
+    outline: none;
+    background-color: #00aaff;
+}
+
+.section {
+    margin-top: 120px; /* Aumenta el margen superior para que los botones no queden tapados por el encabezado */
+}
+
+#ph-chart, #humidity-chart, #temp-chart {
+    margin-top: 20px; /* Ajusta el margen superior para los gráficos */
+}
+
+
